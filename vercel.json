@@ -1,5 +1,0 @@
-{
-    "build": {
-      "postbuild": "node index.js"
-    }
-  }
