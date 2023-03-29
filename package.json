@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev\" \"node index.js\"",
-    "build": "concurrently \"next build\" \"node index.js\"",
-    "start": "next start",
+    "build": "next build",
+    "start": "concurrently \"next start\" \"node index.js\"",
     "lint": "next lint"
   },
   "dependencies": {
