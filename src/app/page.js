@@ -1,10 +1,21 @@
+"use client"
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [state, setState] = useState('')
+  
+  fetch('http://localhost:3001/api/hello')
+  .then(response => response.text())
+  .then(data => console.log(data, 'THIS IS THE DATA'))
+  .catch(error => console.error(error));
+
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
