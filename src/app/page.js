@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const [state, setState] = useState('')
-  
-  fetch('http://localhost:3001/api/hello')
+
+  fetch(process.env.API_URL+'/api/hello')
   .then(response => response.text())
   .then(data => console.log(data, 'THIS IS THE DATA'))
   .catch(error => console.error(error));
